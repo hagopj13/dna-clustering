@@ -4,6 +4,13 @@ Just found this cool project, I've build with [Shant Derounian](https://github.c
 
 The purpose of this project is to cluster large collections of DNA sequences using different algorithms and visualize the clustering process.
 
+The algorithms that we used are (explained below):
+
+ - Hierarchical agglomerative clustering
+ - K-medoids clustering
+ - Buckshot algorithm
+ - mBKM clustering
+
 ![Main](images/main.jpg?raw=true)
 
 ## Algorithms
