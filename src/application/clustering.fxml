@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="386.0" prefWidth="754.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+	<children>
+		<Text layoutX="285.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Clustering" wrappingWidth="145.6708984375">
+			<font>
+				<Font size="31.0" />
+			</font>
+		</Text>
+		<Text layoutX="62.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Algorithm:" wrappingWidth="185.6708984375">
+			<font>
+				<Font size="22.0" />
+			</font>
+		</Text>
+		<RadioButton fx:id="kmedoids" layoutX="62.0" layoutY="126.0" mnemonicParsing="false" onAction="#handleRadioKM" text="K-Medoids">
+			<font>
+				<Font name="Arial" size="15.0" />
+			</font>
+			<toggleGroup>
+				<ToggleGroup fx:id="algorithm" />
+			</toggleGroup>
+		</RadioButton>
+		<RadioButton fx:id="hierarchical" layoutX="62.0" layoutY="150.0" mnemonicParsing="false" onAction="#handleRadioAH" text="Agglom. Hierarchical" toggleGroup="$algorithm">
+			<font>
+				<Font name="Arial" size="15.0" />
+			</font>
+		</RadioButton>
+		<RadioButton fx:id="buckshot" layoutX="62.0" layoutY="177.0" mnemonicParsing="false" onAction="#handleRadioBS" prefWidth="109.0" text="Buckshot" toggleGroup="$algorithm">
+			<font>
+				<Font name="Arial" size="15.0" />
+			</font>
+		</RadioButton>
+		<RadioButton fx:id="mbkm" layoutX="62.0" layoutY="201.0" mnemonicParsing="false" onAction="#handleRadioMB" text="MBKM" toggleGroup="$algorithm">
+			<font>
+				<Font name="Arial" size="15.0" />
+			</font>
+		</RadioButton>
+
+		<Button fx:id="clusterButton" layoutX="65.0" layoutY="243.0" mnemonicParsing="false" onAction="#handleClusterButton" text="Cluster" />
+      
+      <TextArea fx:id="sequencesTextArea" editable="true" layoutX="336.0" layoutY="134.0" prefHeight="51.0" prefWidth="385.0" />
+      <Text layoutX="336.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Parameters" wrappingWidth="185.6708984375">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+      <TextField fx:id="kTextField" layoutX="417.0" layoutY="265.0" prefHeight="29.0" prefWidth="165.0" promptText="Enter a value for k" />
+      <Text fx:id="kText" layoutX="340.0" layoutY="286.0" strokeType="OUTSIDE" strokeWidth="0.0" text="K:" />
+      <Text fx:id="thresholdText" layoutX="340.0" layoutY="286.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Threshold:" visible="false" />
+      <TextField fx:id="thresholdTextField" layoutX="417.0" layoutY="265.0" prefHeight="31.0" prefWidth="165.0" promptText="Specify the threshold" visible="false"/>
+      <Text fx:id="linkText" layoutX="338.0" layoutY="324.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Link:" visible="false"/>
+      <ComboBox fx:id="linkComboBox" layoutX="417.0" layoutY="308.0" onAction="#handleComboBox" prefWidth="150.0" promptText="Choose link" visible="false">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="Single Link" />
+               <String fx:value="Complete Link" />
+               <String fx:value="Average Link" />
+               <String fx:value="Centroid Link" />
+            </FXCollections>
+         </items>
+      </ComboBox>
+      <Text layoutX="335.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sequences">
+         <font>
+            <Font name="Arial" size="22.0" />
+         </font>
+      </Text>
+      <Button fx:id="connecToDBButton" layoutX="336.0" layoutY="196.0" mnemonicParsing="false" onAction="#handleConnectToDBButton" text="Connect to DB" />
+      <Button fx:id="extractXMLButton" layoutX="529.0" layoutY="196.0" mnemonicParsing="false" onAction="#handleExtractXMLButton" text="Extract XML" />
+	</children>
+</Pane>

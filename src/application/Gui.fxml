@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane id="pane" maxHeight="-Infinity" maxWidth="-Infinity"
+	minHeight="-Infinity" minWidth="-Infinity" prefHeight="490.0"
+	prefWidth="660.0" style="-fx-background-image: url('file:DNABG.jpg');"
+	xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="application.Controller">
+	<children>
+		<Text layoutX="220.0" layoutY="178.0" strokeType="OUTSIDE"
+			strokeWidth="0.0" text="DNA" wrappingWidth="138.6708984375">
+			<font>
+				<Font name="Arial" size="36.0" />
+			</font>
+		</Text>
+		<Text layoutX="254.0" layoutY="212.0" strokeType="OUTSIDE"
+			strokeWidth="0.0" text="Clusterer" wrappingWidth="152.6709008216858">
+			<font>
+				<Font size="36.0" />
+			</font>
+		</Text>
+		<Text layoutX="493.0" layoutY="372.0" strokeType="OUTSIDE"
+			strokeWidth="0.0" text="HJ, SD, DK" wrappingWidth="152.6708984375">
+			<font>
+				<Font size="23.0" />
+			</font>
+		</Text>
+		<Button fx:id="beginButton" layoutX="293.0" layoutY="230.0"
+			mnemonicParsing="false" onAction="#handleBeginButton" prefHeight="31.0"
+			prefWidth="74.0" text="Begin" />
+	</children>
+</Pane>
